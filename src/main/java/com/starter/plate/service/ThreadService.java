@@ -9,11 +9,15 @@ import org.springframework.stereotype.Service;
 import java.util.concurrent.CompletableFuture;
 
 @Service
-public class ThreadService {
+public class ThreadService implements ThreadInterface {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(ThreadService.class);
 
+    public ThreadService() {
+    }
+
     @Async
+    @Override
     public CompletableFuture<Double> addDigits(double one, double two) {
         try {
             Thread.sleep(1000);
@@ -26,6 +30,7 @@ public class ThreadService {
 
 
     @Async
+    @Override
     public CompletableFuture<Double> divided(double divide) {
         try {
             Thread.sleep(500);
