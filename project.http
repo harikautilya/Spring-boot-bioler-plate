@@ -1,4 +1,18 @@
-POST http://localhost:8080/api/search
+# curl --location --request POST 'http://localhost:8081/api/search'
+#--header 'Content-Type: application/json'
+#--data-raw '{
+#    "searchWords":["hello "]
+#}'
+POST http://localhost:8081/api/search
+Content-Type: application/json
+
+{
+    "searchWords":["hello "]
+}
+
+###
+
+POST http://localhost:8081/api/search
 Content-Type: application/json
 
 {

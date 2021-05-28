@@ -2,7 +2,9 @@ package com.starter.plate.kafka;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.stereotype.Service;
 
+@Service
 public class Producer {
 
 
@@ -13,6 +15,6 @@ public class Producer {
     }
 
     public void sendSearchTopic(String keyWork) {
-        this.template.send("search", keyWork);
+        this.template.send("search_word", keyWork);
     }
 }
