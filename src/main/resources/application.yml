@@ -6,12 +6,12 @@ cloud:
     stack:
       auto: false
     region:
-      static: us-east-2
+      static:
     credentials:
-      access-key: AKIAU4ZXNRXBOVHXSU5T
-      secret-key: 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
+      access-key:
+      secret-key:
     end-point:
-      uri: https://sqs.us-east-2.amazonaws.com/336734293442/search.fifo
+      uri:
 
 
 spring:
